@@ -2,18 +2,10 @@ import JobCard from "./JobCard";
 
 export default function JobList({ jobs }) {
   return (
-    <ul>
+    <ul className="gap-4 grid my-5 grid-cols-2">
       {jobs &&
         jobs?.length !== 0 &&
-        jobs.map((job) => (
-          <div key={job.id} className="my-10">
-            <JobCard job={job}>
-              <button className="px-3 w-[60%] py-2 block text-center m-auto text-white  rounded bg-blue-950">
-                view more
-              </button>
-            </JobCard>
-          </div>
-        ))}
+        jobs.map((job) => <JobCard key={job?.id} job={job}></JobCard>)}
     </ul>
   );
 }

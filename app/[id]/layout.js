@@ -1,11 +1,11 @@
 import SideBar from "@/components/SideBarLg";
-
-export default function Layout({ employer, candidate }) {
+//children -- deleteProfile/ | settings
+export default function Layout({ employer, candidate, params }) {
   return (
-    <main className="flex">
-      <SideBar />
-      {candidate}
-      {/*employer*/}
+    <main className="flex overflow-hidden h-screen">
+      <SideBar userId={params?.id} />
+      {/*candidate*/}
+      {employer}
     </main>
   );
 }
