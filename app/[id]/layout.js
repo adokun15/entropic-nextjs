@@ -4,8 +4,8 @@ export default function Layout({ employer, candidate, params }) {
   return (
     <main className="flex overflow-hidden h-screen">
       <SideBar userId={params?.id} />
-      {candidate}
-      {/*employer*/}
+      {/*candidate*/}
+      {employer}
     </main>
   );
 }

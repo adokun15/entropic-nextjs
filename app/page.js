@@ -40,43 +40,24 @@ export default function Page() {
       <motion.p variants={appearMotion} className="text-xl text-center">
         Unlock Your Potentials with Just one Click
       </motion.p>
-      <div className="flex justify-center gap-2">
-        <MotionLink
-          variants={appearMotion}
-          whileHover={{
-            scale: 1.05,
-            transition: {
-              ease: "easeIn",
-              duration: 0.2,
-            },
-          }}
-          className={`${buttonVariants({
-            variant: "default",
-            size: "lg",
-          })} `}
-          href="/login"
-        >
-          Login
-        </MotionLink>
 
-        <MotionLink
-          variants={appearMotion}
-          whileHover={{
-            scale: 1.05,
-            transition: {
-              ease: "easeIn",
-              duration: 0.2,
-            },
-          }}
-          className={`${buttonVariants({
-            variant: "outline",
-            size: "lg",
-          })} `}
-          href="/signup"
-        >
-          Sign Up
-        </MotionLink>
-      </div>
+      <MotionLink
+        variants={appearMotion}
+        whileHover={{
+          scale: 1.05,
+          transition: {
+            ease: "easeIn",
+            duration: 0.2,
+          },
+        }}
+        className={`${buttonVariants({
+          variant: "default",
+          size: "lg",
+        })} block mx-[46vw]`}
+        href="/login"
+      >
+        Sign Up
+      </MotionLink>
     </motion.main>
   );
 }
