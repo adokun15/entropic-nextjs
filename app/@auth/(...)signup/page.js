@@ -1,4 +1,9 @@
 import Modal from "@/components/Modal";
+import SignUp from "@/components/signupform";
 export default function ModalSignup() {
-  return <Modal>A Signup Test</Modal>;
+  return (
+    <Modal>
+      <SignUp />
+    </Modal>
+  );
 }

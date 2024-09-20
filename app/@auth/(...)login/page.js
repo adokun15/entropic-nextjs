@@ -1,9 +1,9 @@
-import AuthForm from "@/components/AuthForm";
+import Login from "@/components/loginform";
 import Modal from "@/components/Modal";
 export default function ModalLogin() {
   return (
     <Modal>
-      <AuthForm />
+      <Login />
     </Modal>
   );
 }

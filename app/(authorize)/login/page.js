@@ -1,6 +1,5 @@
-import AuthForm from "@/components/AuthForm";
-import { Input } from "@/components/ui/input";
+import Login from "@/components/loginform";
 
-export default function Login() {
-  return <AuthForm />;
+export default function LoginPage() {
+  return <Login />;
 }

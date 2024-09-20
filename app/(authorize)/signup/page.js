@@ -1,3 +1,5 @@
-export default function SignUp() {
-  return <p>A SignUp Page</p>;
+import SignUp from "@/components/signupform";
+
+export default function SignUpPage() {
+  return <SignUp />;
 }

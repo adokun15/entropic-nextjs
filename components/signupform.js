@@ -8,12 +8,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "./ui/form";
+} from "@/components/ui/form";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
-import { Button } from "./ui/button";
-
+import { Button } from "@/components/ui/button";
 const formSchema = z.object({
   firstname: z
     .string()
@@ -24,7 +24,7 @@ const formSchema = z.object({
   password: z.string().min(6, { message: "passord is too short" }),
 });
 
-export default function AuthForm() {
+export default function SignUp() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,7 +41,7 @@ export default function AuthForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form className="px-[10vw]" onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           name="firstname"
           control={form.control}
@@ -77,7 +77,7 @@ export default function AuthForm() {
           render={({ field }) => (
             <>
               <FormItem>
-                <FormLabel>First Name</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input type="email" placeholder="Enter Email" {...field} />
                 </FormControl>
@@ -91,7 +91,7 @@ export default function AuthForm() {
           render={({ field }) => (
             <>
               <FormItem>
-                <FormLabel>First Name</FormLabel>
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
                     type="password"
@@ -107,37 +107,4 @@ export default function AuthForm() {
       </form>
     </Form>
   );
-}
-
-{
-  /**
-    <form className="*:block leading-9 *:my-4 my-5">
-      {children}
-
-      <label className="text-2xl">Email</label>
-      <input
-        required
-        name="email"
-        type="email"
-        className="bg-blue-200 focus:bg-blue-300 py-2 px-3 caret-blue-800 outline-blue-600 rounded w-full"
-        placeholder="Enter email"
-      />
-      <label className="text-2xl">Password</label>
-      <input
-        name="password"
-        type="password"
-        className="bg-blue-200 focus:bg-blue-300 py-2 px-3 caret-blue-800 outline-blue-600 rounded w-full"
-        placeholder="Enter Password"
-      />
-      <button
-        className="bg-blue-800 py-1 px-3 text-white rounded-xl hover:bg-blue-400 hover:text-blue-950
-          transition-colors duration-500 ease-in-out focus:translate-y-1
-          "
-      >
-        Submit
-      </button>
-    </form>
-
-* 
- */
 }
