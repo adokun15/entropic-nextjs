@@ -76,9 +76,9 @@ export default function SideBar({ role, userId }) {
       </h1>
       <ul className="text-center text-xl *:tracking-wider space-y-10 my-10">
         {/*
-        <CandidateList userId={userId} />
-        */}
         <EmployerList userId={userId} />
+        */}
+        <CandidateList userId={userId} />
         <li className="flex justify-center gap-1">
           <Settings />
           <Link href={`/${userId}/settings`}>Settings</Link>
